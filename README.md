@@ -1,4 +1,14 @@
 # TallerSolid
+
+
+##El sistema ejecuta una pequeña secuencia de pasos para probar el funcionamiento del código fuente:
+## 1.	Producir un helado de vainilla y una torta de chocolate
+## 2.	A ambos agregarles CREMA y FRUTILLAS como aderezos 
+## 3.	A ambos cambiar el tipo de leche por Leche Deslactosada
+## 4.	Finalmente mostrar el precio final de cada postre.
+
+
+
 ## 1.	Clases Helado y Pastel. Tienen mucha similitud, se debería crear una clase padre llamada Postre.
 ##### 
 ## 2.	Clases Procesos.OperacionesAderezo y Postre. ¿Es necesaria la clase OperacionesAderezo?. Se puede incluir dentro de postre un método para agregar un aderezo y para quitar un aderezo.
