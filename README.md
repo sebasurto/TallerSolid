@@ -16,7 +16,7 @@
   
 2.	Clases Procesos.OperacionesAderezo y Postre. ¿Es necesaria la clase OperacionesAderezo?. Se puede incluir dentro de postre un método para agregar un aderezo y para quitar un aderezo.
 
- Análisis: Podria mantenerse y cumplir con el cuarto princpio de Interface Segregation Principle, de no usar muchos métodos en una interfaz que no usaremos mucho, dado que no siempre usaremos el añadir o quitar un aderezo, pero adecuamos el método para que tome la nueva clase padre Postre.
+   Análisis: Podria mantenerse y cumplir con el cuarto princpio de Interface Segregation Principle, de no usar muchos métodos en una interfaz que no usaremos mucho, dado que no siempre usaremos el añadir o quitar un aderezo, pero adecuamos el método para que tome la nueva clase padre Postre.
 
  3.	Métodos calcularPrecioFinal() y  showPrecioFinal() están muy relacionados, deben estar en otra clase por si cambia la fórmula de cálculo. La clase nueva debe llamarse Procesos.ManejadorDePrecio.
 
