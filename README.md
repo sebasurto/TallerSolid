@@ -12,7 +12,7 @@
 ## Analice las siguientes partes del código, explique su análisis en el archivo README.md y corrija el código para que cumpla con los principios SOLID.
  1.	Clases Helado y Pastel. Tienen mucha similitud, se debería crear una clase padre llamada Postre.
  
- 	 Análisis: Se vulnera el principio 2 Open/Closed Principle dado que hay clases que realizan tareas similares, el principio nos habla que debemos poder extender comportamientos de una clase sin modificarla, en este caso tenemos un produco más general que es Postre que recopile las caacterísicas que comparten Helado y Pastel.
+   Análisis: Se vulnera el principio 2 Open/Closed Principle dado que hay clases que realizan tareas similares, el principio nos habla que debemos poder extender comportamientos de una clase sin modificarla, en este caso tenemos un produco más general que es Postre que recopile las caacterísicas que comparten Helado y Pastel.
   
 2.	Clases Procesos.OperacionesAderezo y Postre. ¿Es necesaria la clase OperacionesAderezo?. Se puede incluir dentro de postre un método para agregar un aderezo y para quitar un aderezo.
 
