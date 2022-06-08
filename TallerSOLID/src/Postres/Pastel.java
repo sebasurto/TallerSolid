@@ -12,7 +12,7 @@ import Adicionales.Aderezo;
  *
  * @author Pedro Mendoza
  */
-public class Pastel{
+public class Pastel extends Postres{
     private String sabor;
     private double precioParcial;
     private ArrayList<Aderezo> aderezos;
