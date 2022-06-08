@@ -29,7 +29,7 @@
 
  4.	Enum Adicionales.Aderezo es muy estático, debe convertirse en clase abstract con un atributo nombre y un método abstracto setNombre para que cada tipo de aderezo sea una subclase de Aderezo e implemente dicho método. También, sobrescriba el método toString() en la clase Aderezo, para que devuelva el nombre del aderezo en mayúsculas.
 
-  ##### Análisis:
+  ##### Análisis: Cómo debemos implementar subclases usando el padre, debemos usar el principio de sustitución de Liskov, dado que debemos usarlas sin generar fallos o alterar su funcionamiento, utilizando al padre.
 
  5.	Paquete Leche y la clase Procesos.ManejadorDeLeche. En el main descomente las instrucciones para realizar el cambio del tipo de leche utilizada en cada postre, luego analice como solucionar el error generado en la clase Leche.LecheDeslactosada.
 
@@ -58,11 +58,12 @@
             System.out.println(postre);
             mnj_leche.cambiarTipoLeche(postre);
             System.out.println(ManejadorDePrecio.showPrecioFinal(postre));
-        });        
-     }
+        });
+        }        
+     
         
     
 
 
  
- #####   Análisis
+ #####   Análisis: 
