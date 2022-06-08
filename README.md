@@ -1,11 +1,11 @@
 # TallerSolid
 
 
-##El sistema ejecuta una pequeña secuencia de pasos para probar el funcionamiento del código fuente:
-## 1.	Producir un helado de vainilla y una torta de chocolate
-## 2.	A ambos agregarles CREMA y FRUTILLAS como aderezos 
-## 3.	A ambos cambiar el tipo de leche por Leche Deslactosada
-## 4.	Finalmente mostrar el precio final de cada postre.
+## El sistema ejecuta una pequeña secuencia de pasos para probar el funcionamiento del código fuente:
+ 1.	Producir un helado de vainilla y una torta de chocolate
+ 2.	A ambos agregarles CREMA y FRUTILLAS como aderezos 
+ 3.	A ambos cambiar el tipo de leche por Leche Deslactosada
+ 4.	Finalmente mostrar el precio final de cada postre.
 
 
 
