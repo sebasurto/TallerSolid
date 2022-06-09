@@ -138,9 +138,5 @@ public class LecheDeslactosada extends LecheEntera {
         });
         }        
      
-        
-    
-
-
- 
- #####   Análisis: 
+         
+ #####   Principios establecidos en el código
