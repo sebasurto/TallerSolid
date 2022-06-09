@@ -19,15 +19,17 @@
  
   ##### Análisis: Se vulnera el principio 2 Open/Closed Principle dado que hay clases que realizan tareas similares, el principio nos habla que debemos poder extender comportamientos de una clase sin modificarla, en este caso tenemos un produco más general que es Postre que recopile las caacterísicas que comparten Helado y Pastel. 
   ```
-  public class Pastel extends Postres{}
-  public class Helado extends Postres{}
+  public class Pastel extends Postres{} //
+  public class Helado extends Postres{} //
+  
   public abstract class Postres{
-	 private String sabor;
+  private String sabor;
   private double precioParcial;
   private ArrayList<Aderezo> aderezos;
-	 public abstract double calcularPrecioFinal();
-	 public abstract ArrayList<Aderezo> getAderezos();
-	 public abstract String toString();
+  
+  public abstract double calcularPrecioFinal();
+  public abstract ArrayList<Aderezo> getAderezos();
+  public abstract String toString();
   public abstract String showPrecioFinal();
   }
   ```
@@ -57,9 +59,25 @@ public class OperacionesAderezo {
 
  5.	Paquete Leche y la clase Procesos.ManejadorDeLeche. En el main descomente las instrucciones para realizar el cambio del tipo de leche utilizada en cada postre, luego analice como solucionar el error generado en la clase Leche.LecheDeslactosada.
 
-   ##### Análisis:
+   ##### Análisis: Principio de inversión de dependencias, "En algún momento nuestro programa o aplicación llegará a estar formado por muchos módulos. Cuando esto pase, es cuando debemos usar inyección de dependencias, lo que nos permitirá controlar las funcionalidades desde un sitio concreto en vez de tenerlas esparcidas por todo el programa." tomado de (https://enmilocalfunciona.io/principios-solid/). El programa depende de un módulo de bajo nivel, que por diseño podriamos manejar de otro módulo, para que no mande el error podemos obviar la exepción para dar partida a que el código pueda crecer en una futura implemntación. 
+```
+public class LecheDeslactosada extends LecheEntera {
     
- 6.	Cambie el main por el siguiente código y ajuste según su propia implementación.
+    @Override
+    public void usarHelado() {
+        System.out.println("Usando leche deslactosada");
+    }
+
+    @Override
+    public void usarPastel() {
+        // Lanzar error No se puede usar en pastel
+    	System.out.println("No se puede usar leche deslactosada en el pastel");
+    	//throw new RuntimeException(this.getClass() + ": No se puede usar en pastel");
+    }
+        
+}
+```
+6.	Cambie el main por el siguiente código y ajuste según su propia implementación.
  
  
  
