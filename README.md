@@ -51,8 +51,27 @@ public class OperacionesAderezo {
 
  3.	Métodos calcularPrecioFinal() y  showPrecioFinal() están muy relacionados, deben estar en otra clase por si cambia la fórmula de cálculo. La clase nueva debe llamarse Procesos.ManejadorDePrecio.
 
-  ##### Análisis: Interface Segregation Principle y 
+  ##### Análisis: 
+```
+package Procesos;
 
+import Postres.Postres;
+
+public class ManejadorDePrecio {
+	
+	Postres postre;
+	
+	public String showPrecioFinal(){
+        return "Precio Final: $ " + calcularPrecioFinal();
+    }
+	
+	public double calcularPrecioFinal(){
+        double precioFinal;
+        precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
+        return precioFinal;
+    }
+}
+```
  4.	Enum Adicionales.Aderezo es muy estático, debe convertirse en clase abstract con un atributo nombre y un método abstracto setNombre para que cada tipo de aderezo sea una subclase de Aderezo e implemente dicho método. También, sobrescriba el método toString() en la clase Aderezo, para que devuelva el nombre del aderezo en mayúsculas.
 
   ##### Análisis: Cómo debemos implementar subclases usando el padre, debemos usar el principio de sustitución de Liskov, dado que debemos usarlas sin generar fallos o alterar su funcionamiento, utilizando al padre.
