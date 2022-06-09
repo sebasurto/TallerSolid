@@ -17,15 +17,39 @@
 ## Analice las siguientes partes del código, explique su análisis en el archivo README.md y corrija el código para que cumpla con los principios SOLID.
  1.	Clases Helado y Pastel. Tienen mucha similitud, se debería crear una clase padre llamada Postre.
  
-  ##### Análisis: Se vulnera el principio 2 Open/Closed Principle dado que hay clases que realizan tareas similares, el principio nos habla que debemos poder extender comportamientos de una clase sin modificarla, en este caso tenemos un produco más general que es Postre que recopile las caacterísicas que comparten Helado y Pastel.
+  ##### Análisis: Se vulnera el principio 2 Open/Closed Principle dado que hay clases que realizan tareas similares, el principio nos habla que debemos poder extender comportamientos de una clase sin modificarla, en este caso tenemos un produco más general que es Postre que recopile las caacterísicas que comparten Helado y Pastel. 
+  ```
+  public class Pastel extends Postres{}
+  public class Helado extends Postres{}
+  public abstract class Postres{
+	 private String sabor;
+  private double precioParcial;
+  private ArrayList<Aderezo> aderezos;
+	 public abstract double calcularPrecioFinal();
+	 public abstract ArrayList<Aderezo> getAderezos();
+	 public abstract String toString();
+  public abstract String showPrecioFinal();
+  }
+  ```
   
 2.	Clases Procesos.OperacionesAderezo y Postre. ¿Es necesaria la clase OperacionesAderezo?. Se puede incluir dentro de postre un método para agregar un aderezo y para quitar un aderezo.
 
-   ##### Análisis: Podria mantenerse y cumplir con el cuarto principio de Interface Segregation Principle, de no usar muchos métodos en una interfaz que no usaremos mucho, dado que no siempre usaremos el añadir o quitar un aderezo, pero adecuamos el método para que tome la nueva clase padre Postre.
+   ##### Análisis: Podria mantenerse y cumplir con el cuarto principio de Interface Segregation Principle, para no usar muchos métodos en una interfaz que no usaremos mucho, dado que no siempre usaremos el añadir o quitar un aderezo, pero adecuamos el método para que tome la nueva clase padre Postre.
+
+```
+public class OperacionesAderezo {
+    public static void anadirAderezoPostres(Postres helado,Aderezo aderezo){
+        helado.getAderezos().add(aderezo);
+    }
+    public static void quitarAderezoPostres(Postres helado,Aderezo aderezo){
+        helado.getAderezos().remove(aderezo);
+    }
+}
+```
 
  3.	Métodos calcularPrecioFinal() y  showPrecioFinal() están muy relacionados, deben estar en otra clase por si cambia la fórmula de cálculo. La clase nueva debe llamarse Procesos.ManejadorDePrecio.
 
-  ##### Análisis: 
+  ##### Análisis: Interface Segregation Principle y 
 
  4.	Enum Adicionales.Aderezo es muy estático, debe convertirse en clase abstract con un atributo nombre y un método abstracto setNombre para que cada tipo de aderezo sea una subclase de Aderezo e implemente dicho método. También, sobrescriba el método toString() en la clase Aderezo, para que devuelva el nombre del aderezo en mayúsculas.
 
