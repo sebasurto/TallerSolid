@@ -2,11 +2,12 @@ package Procesos;
 
 import Postres.Postres;
 
-public interface ManejadorDePrecio {
+public class ManejadorDePrecio {
+	private Postres postre;
 	
 	
-	public String showPrecioFinal();
-	
-	public double calcularPrecioFinal();
+	public  ManejadorDePrecio(Postres postre) {
+		this.postre=postre;
+	}
 	
 }

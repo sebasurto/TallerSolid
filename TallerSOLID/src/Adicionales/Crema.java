@@ -2,9 +2,11 @@ package Adicionales;
 
 public class Crema extends Aderezo{
 
-	public Crema(String name) {
-		super(name);
-		// TODO Auto-generated constructor stub
+	
+
+	public Crema() {
+		super("CREMA");
+		
 	}
 
 	@Override
@@ -12,6 +14,10 @@ public class Crema extends Aderezo{
 		this.name=name;
 		
 	}
+
+
+
+	
 	
 
 	

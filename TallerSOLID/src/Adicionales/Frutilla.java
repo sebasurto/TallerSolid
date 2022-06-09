@@ -4,9 +4,8 @@ package Adicionales;
 
 public class Frutilla extends Aderezo{
 
-	public Frutilla(String name) {
-		super(name);
-		// TODO Auto-generated constructor stub
+	public Frutilla() {
+		super("Frutilla");
 	}
 
 	@Override

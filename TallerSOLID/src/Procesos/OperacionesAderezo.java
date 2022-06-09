@@ -16,9 +16,9 @@ import Postres.Helado;
  */
 public class OperacionesAderezo {
     
-    public static void anadirAderezoPostres(Postres helado,Aderezo aderezo){
-    	if(helado.getAderezos()==null)
-    		helado.getAderezos().add(aderezo);
+    public static void anadirAderezoPostres(Postres postres,Aderezo aderezo){
+    	
+    	postres.getAderezos().add(aderezo);
     }
     
     public static void quitarAderezoPostres(Postres helado,Aderezo aderezo){

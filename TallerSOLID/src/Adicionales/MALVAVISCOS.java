@@ -2,9 +2,8 @@ package Adicionales;
 
 public class MALVAVISCOS extends Aderezo{
 
-	public MALVAVISCOS(String name) {
-		super(name);
-		// TODO Auto-generated constructor stub
+	public MALVAVISCOS() {
+		super("MALVASDISCO");
 	}
 
 	@Override
