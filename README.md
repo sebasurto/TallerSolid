@@ -51,7 +51,7 @@ public class OperacionesAderezo {
 
  3.	Métodos calcularPrecioFinal() y  showPrecioFinal() están muy relacionados, deben estar en otra clase por si cambia la fórmula de cálculo. La clase nueva debe llamarse Procesos.ManejadorDePrecio.
 
-  ##### Análisis: 
+  ##### Análisis: Single Responsibility Principle, dado que sólo deberia tener una razón para cambiar el código, en este caso, el cálculo de los precios, debería estar suceptible a modificarse desde un método general una vez. 
 ```
 package Procesos;
 
