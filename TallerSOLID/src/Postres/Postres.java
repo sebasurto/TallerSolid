@@ -10,7 +10,7 @@ import Procesos.OperacionesAderezo;
 
 import java.util.ArrayList;
 
-public abstract class Postres implements ManejadorDePrecio{
+public abstract class Postres extends ManejadorDePrecio{
 	private String sabor;
     protected double precioParcial;
     protected ArrayList<Aderezo> aderezos;
