@@ -7,6 +7,7 @@ package Postres;
 
 import java.util.ArrayList;
 import Adicionales.Aderezo;
+import Procesos.ManejadorDePrecio;
 
 /**
  *
@@ -15,7 +16,7 @@ import Adicionales.Aderezo;
 public class Pastel extends Postres{
     private String sabor;
     private double precioParcial;
-    private ArrayList<Aderezo> aderezos;
+    //private ArrayList<Aderezo> aderezos;
     
     public Pastel(String sabor){
         aderezos= new ArrayList<>();
@@ -24,9 +25,7 @@ public class Pastel extends Postres{
     }
     
     public double calcularPrecioFinal(){
-        double precioFinal;
-        precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
-        return precioFinal;
+		return super.calcularPrecioFinal();
     }
 
     public ArrayList<Aderezo> getAderezos() {

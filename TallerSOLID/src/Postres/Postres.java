@@ -3,15 +3,26 @@ package Postres;
 import java.util.ArrayList;
 
 import Adicionales.Aderezo;
+import Procesos.ManejadorDePrecio;
+
 import java.util.ArrayList;
 
-public abstract class Postres {
+public abstract class Postres implements ManejadorDePrecio{
 	private String sabor;
-    private double precioParcial;
-    private ArrayList<Aderezo> aderezos;
+    protected double precioParcial;
+    protected ArrayList<Aderezo> aderezos;
 
-	public abstract double calcularPrecioFinal();
 	public abstract ArrayList<Aderezo> getAderezos();
 	public abstract String toString();
-    public abstract String showPrecioFinal();
+	
+	public double calcularPrecioFinal(){
+        double precioFinal;
+        precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
+        return precioFinal;
+    }
+	
+	public String showPrecioFinal(){
+        return "Precio Final: $ " + calcularPrecioFinal();
+    }
+	
 }
